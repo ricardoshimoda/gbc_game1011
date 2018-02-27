@@ -1,14 +1,21 @@
+/*
+* Implements the weight conversion from kilograms to pounds
+*/
 #pragma once
+
+#include <string>
 #include "BaseFunction.h"
 
-/*
- * Implements the weight conversion from kilograms to pounds
- */
+using namespace std;
+
 class FunctionOne:BaseFunction 
 {
 private:
 	double amountInKilos;
+protected:
+	bool ValidInput();
 public:
 	void InputData();
 	void PrintResult();
+	string GetDescription();
 };

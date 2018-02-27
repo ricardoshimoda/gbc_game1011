@@ -144,10 +144,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BaseFunction.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="FunctionFive.h" />
     <ClInclude Include="FunctionFour.h" />
     <ClInclude Include="FunctionThree.h" />
     <ClInclude Include="FunctionTwo.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="FunctionOne.h" />
@@ -160,6 +162,7 @@
     <ClCompile Include="FunctionThree.cpp" />
     <ClCompile Include="FunctionTwo.cpp" />
     <ClCompile Include="GAME1011_A1_NakasakoRicardo.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

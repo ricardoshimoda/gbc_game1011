@@ -1,3 +1,4 @@
+#include "stdafx.h"
 
 #include <iostream>
 #include <string>
@@ -21,3 +22,9 @@ string FunctionOne::GetDescription()
 {
 	return "Transforms kilos into pounds";
 }
+
+bool FunctionOne::ValidInput() 
+{
+	return true;
+}
+
