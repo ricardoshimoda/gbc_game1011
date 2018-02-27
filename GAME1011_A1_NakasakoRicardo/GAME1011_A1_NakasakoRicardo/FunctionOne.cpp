@@ -9,13 +9,20 @@ using namespace std;
 
 void FunctionOne::InputData() 
 {
+	bool error = false;
 	cout << "Please, inform the quantity in kilos to be converted to pounds " << endl;
-	cin >> amountInKilos;
+	while (!(cin >> amountInKilos))
+	{
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Invalid amount - can you please try it again? " << endl;
+	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
 void FunctionOne::PrintResult() 
 {
-	cout << "The result of the operation is: " << (amountInKilos * 2.2) << endl << endl;
+	cout << "There are " << (amountInKilos * 2.2) << " pounds in " << amountInKilos << " kilos." << endl;
 }
 
 string FunctionOne::GetDescription()
@@ -23,8 +30,4 @@ string FunctionOne::GetDescription()
 	return "Transforms kilos into pounds";
 }
 
-bool FunctionOne::ValidInput() 
-{
-	return true;
-}
 

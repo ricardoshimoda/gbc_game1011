@@ -12,8 +12,6 @@ class FunctionOne:public BaseFunction
 {
 private:
 	double amountInKilos;
-protected:
-	bool ValidInput();
 public:
 	void InputData();
 	void PrintResult();

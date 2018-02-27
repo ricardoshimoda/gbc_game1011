@@ -11,8 +11,6 @@ class FunctionTwo : public BaseFunction
 {
 private:
 	double temperatureInCelsius;
-protected:
-	bool ValidInput();
 public:
 	void InputData();
 	void PrintResult();

@@ -11,8 +11,6 @@ class FunctionFive : public BaseFunction
 {
 private:
 	int finalSquare;
-protected:
-	bool ValidInput();
 public:
 	void InputData();
 	void PrintResult();

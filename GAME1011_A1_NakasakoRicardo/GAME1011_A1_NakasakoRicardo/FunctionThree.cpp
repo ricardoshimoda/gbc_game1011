@@ -23,8 +23,4 @@ string FunctionThree::GetDescription()
 	return "Transforms kilos into pounds";
 }
 
-bool FunctionThree::ValidInput()
-{
-	return true;
-}
 

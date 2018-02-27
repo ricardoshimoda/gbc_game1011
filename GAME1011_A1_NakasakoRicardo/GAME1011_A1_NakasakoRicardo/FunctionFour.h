@@ -11,8 +11,6 @@ class FunctionFour : public BaseFunction
 {
 private:
 	int finalNumber;
-protected:
-	bool ValidInput();
 public:
 	void InputData();
 	void PrintResult();

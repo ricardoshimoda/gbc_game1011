@@ -11,8 +11,6 @@ class FunctionThree : public BaseFunction
 {
 private:
 	int teaspoons;
-protected:
-	bool ValidInput();
 public:
 	void InputData();
 	void PrintResult();

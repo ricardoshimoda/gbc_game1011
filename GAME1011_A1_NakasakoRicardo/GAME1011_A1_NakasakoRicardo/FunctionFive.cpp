@@ -23,8 +23,4 @@ string FunctionFive::GetDescription()
 	return "Transforms kilos into pounds";
 }
 
-bool FunctionFive::ValidInput()
-{
-	return true;
-}
 

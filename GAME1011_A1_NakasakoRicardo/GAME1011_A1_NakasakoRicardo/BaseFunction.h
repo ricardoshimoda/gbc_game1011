@@ -8,8 +8,6 @@ using namespace std;
  */
 class BaseFunction 
 {
-protected:
-	virtual bool ValidInput() = 0;
 public:
 	virtual void InputData() = 0;
 	virtual void PrintResult() = 0;

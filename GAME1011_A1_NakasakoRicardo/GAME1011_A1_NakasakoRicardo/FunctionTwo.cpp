@@ -23,8 +23,4 @@ string FunctionTwo::GetDescription()
 	return "Transforms kilos into pounds";
 }
 
-bool FunctionTwo::ValidInput()
-{
-	return true;
-}
 

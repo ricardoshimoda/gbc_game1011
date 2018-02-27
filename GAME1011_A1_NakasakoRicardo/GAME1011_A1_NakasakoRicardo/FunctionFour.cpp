@@ -23,8 +23,4 @@ string FunctionFour::GetDescription()
 	return "Transforms kilos into pounds";
 }
 
-bool FunctionFour::ValidInput()
-{
-	return true;
-}
 

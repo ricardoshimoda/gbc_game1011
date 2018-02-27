@@ -1,8 +1,8 @@
 #include "stdafx.h"
 
-
 #include <iostream>
-#include <stdio.h>
+#include <conio.h>
+
 #include "Constants.h"
 #include "Menu.h"
 #include "BaseFunction.h"
@@ -39,28 +39,37 @@ char Menu::GetUserChoice()
 			cout << "[" << (menuItem + 1) << "] " << functions[menuItem]->GetDescription() << endl;
 		}
 		cout << "[" << UPPER_CASE_EXIT_PROGRAM << "] to exit the program" << endl;
-		userInput = getchar();
+		userInput = _getch();
 		isValid = ValidInput(userInput);
 		if(!isValid)
 		{
-			cout << endl << "(" << userInput << ")";
+			cout << endl << "(" << userInput << ") is not valid" << endl;
+		}
+		else
+		{
+			return userInput;
 		}
 	} while (!isValid);
+	// Safe return value
 	return UPPER_CASE_EXIT_PROGRAM;
 }
 
 bool Menu::ValidInput(char userInput)
 {
-	if (userInput != LOWER_CASE_EXIT_PROGRAM || /* Both lower or upper case  */
-		userInput != UPPER_CASE_EXIT_PROGRAM || /* are considered */
-		userInput <= LOWEST_CHOICE_MENU ||      /* only functions from 1  */
-		userInput >= HIGHEST_CHOICE_MENU)       /* to 6 */
+	if (userInput == LOWER_CASE_EXIT_PROGRAM || /* Both lower or upper case  */
+		userInput == UPPER_CASE_EXIT_PROGRAM || /* are considered */
+		(userInput > LOWEST_CHOICE_MENU &&      /* only functions from 1  */
+		userInput < HIGHEST_CHOICE_MENU))       /* to 6 */
 	{
-		return false;
+		return true;
 	}
-	return true;
+	return false;
 }
 
 void Menu::CallFunction(int functionNumber) {
-
+	functions[functionNumber]->InputData();
+	functions[functionNumber]->PrintResult();
+	cout << endl << "Press any key to continue" << endl;
+	_getch();
+	system("cls");
 }
