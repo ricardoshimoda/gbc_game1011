@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class FunctionOne:BaseFunction 
+class FunctionOne:public BaseFunction 
 {
 private:
 	double amountInKilos;

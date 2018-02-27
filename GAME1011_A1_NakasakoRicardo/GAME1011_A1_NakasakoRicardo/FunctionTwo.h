@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class FunctionTwo :BaseFunction
+class FunctionTwo : public BaseFunction
 {
 private:
 	double temperatureInCelsius;

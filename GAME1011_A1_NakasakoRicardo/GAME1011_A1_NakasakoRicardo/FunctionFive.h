@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class FunctionFive :BaseFunction
+class FunctionFive : public BaseFunction
 {
 private:
 	int finalSquare;

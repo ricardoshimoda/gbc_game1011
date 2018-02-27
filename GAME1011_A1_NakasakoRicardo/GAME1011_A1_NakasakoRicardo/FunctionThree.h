@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class FunctionThree :BaseFunction
+class FunctionThree : public BaseFunction
 {
 private:
 	int teaspoons;
