@@ -67,9 +67,19 @@ bool Menu::ValidInput(char userInput)
 }
 
 void Menu::CallFunction(int functionNumber) {
-	functions[functionNumber]->InputData();
-	functions[functionNumber]->PrintResult();
-	cout << endl << "Press any key to continue" << endl;
-	_getch();
+	char userInnerMenu = '/0';
+	do {
+		functions[functionNumber]->InputData();
+		functions[functionNumber]->PrintResult();
+		cout << endl << "Press R for another round or M to go back to the main menu." << endl;
+		userInnerMenu = _getch();
+		while (userInnerMenu != 'R' && 
+			   userInnerMenu != 'r' && 
+			   userInnerMenu != 'M' && 
+			   userInnerMenu != 'm') {
+			cout << endl << "(" << userInnerMenu << ") is an invalid Entry. Please, press R for another round or M to go back to the main menu." << endl;
+			userInnerMenu = _getch();
+		}
+	} while (userInnerMenu == 'R' || userInnerMenu == 'r');
 	system("cls");
 }

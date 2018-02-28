@@ -11,6 +11,7 @@ class FunctionFour : public BaseFunction
 {
 private:
 	int finalNumber;
+	void PrintBlanks(int spaces);
 public:
 	void InputData();
 	void PrintResult();

@@ -9,18 +9,24 @@ using namespace std;
 
 void FunctionThree::InputData()
 {
-	cout << "Please, inform the quantity in kilos to be converted to pounds " << endl;
-	//cin >> ;
+	cout << endl << "Please, inform the amount of tablespoons to be converted to millilitres " << endl;
+	while (!(cin >> teaspoons) || teaspoons < 0)
+	{
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Invalid amount - can you please try it again? " << endl;
+	}
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
 void FunctionThree::PrintResult()
 {
-	//cout << "The result of the operation is: " << (amountInKilos * 2.2) << endl << endl;
+	cout << teaspoons << " teaspoons is " << (((double)teaspoons) * 4.92) << " ml " << endl ;
 }
 
 string FunctionThree::GetDescription()
 {
-	return "Transforms kilos into pounds";
+	return "Transforms tablespoons into millilitres";
 }
 
 

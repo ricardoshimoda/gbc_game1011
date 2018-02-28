@@ -9,9 +9,8 @@ using namespace std;
 
 void FunctionOne::InputData() 
 {
-	bool error = false;
-	cout << "Please, inform the quantity in kilos to be converted to pounds " << endl;
-	while (!(cin >> amountInKilos))
+	cout << endl << "Please, inform the quantity in kilos to be converted to pounds " << endl;
+	while (!(cin >> amountInKilos) || amountInKilos < 0)
 	{
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
