@@ -9,6 +9,7 @@ using namespace std;
 class BaseFunction 
 {
 public:
+	char FunctionMenu();
 	virtual void InputData() = 0;
 	virtual void PrintResult() = 0;
 	virtual string GetDescription()=0;

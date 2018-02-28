@@ -59,6 +59,7 @@ void FunctionFour::PrintResult()
 		}
 		cout << endl;
 	}
+	delete columnSize;
 }
 
 string FunctionFour::GetDescription()
