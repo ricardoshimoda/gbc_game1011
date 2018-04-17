@@ -18,4 +18,5 @@ protected:
 	bool broken;
 public:
 	void PrintItem();
+
 };

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include <iostream>
+#include <string>
 #include "Note.h"
 #include "InventoryItem.h"
 
@@ -24,3 +25,37 @@ template <class Templ> void Note<Templ>::SetInventoryData(string itemName, doubl
 	timesUsed = itemTimesUsed;
 	broken = itemBroken;
 }
+
+template <class Templ> Note<Templ> Note<Templ>::operator -(const Note<Templ> other) { 
+	Note result<Templ>;
+	result.price = this.price - other.price;
+	result.timesUsed = this.timesUsed - other.timesUsed;
+	result.broken = false;
+	result.text = this.text + other.text;
+	return result;
+}
+template <class Templ> Note<Templ> Note<Templ>::operator +(const Note<Templ> other) { 
+	Note result<Templ>;
+	result.price = this.price + other.price;
+	result.timesUsed = this.timesUsed + other.timesUsed;
+	result.broken = false;
+	result.text = this.text + other.text;
+	return result;
+}
+template <class Templ> Note<Templ> Note<Templ>::operator --() { 
+	Note result<Templ>;
+	result.price = this.price/2;
+	result.timesUsed--;
+	result.broken = false;
+	result.text = this.text;
+	return result;
+}
+template <class Templ> Note<Templ> Note<Templ>::operator ++() { 
+	Note result<Templ>;
+	result.price = this.price * 2;
+	result.timesUsed++;
+	result.broken = false;
+	result.text = this.text;
+	return result;
+}
+

@@ -1,0 +1,2 @@
+﻿  OperatorOverload_Exam.cpp
+c:\projects\gbc\game1011\gbc_game1011\labs\operator overloading\operatoroverload_exam\operatoroverload_exam\operatoroverload_exam.cpp(69): error C2440: 'default argument': cannot convert from 'int' to 'complexType &'

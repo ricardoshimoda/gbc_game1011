@@ -12,4 +12,8 @@ public:
 	Note(string readText);
 	void PrintNote();
 	void SetInventoryData(string itemName, double itemPrice, int itemTimesUsed, bool itemBroken);
+	Note operator -(const Note other);
+	Note operator +(const Note other);
+	Note operator --();
+	Note operator ++();
 };
