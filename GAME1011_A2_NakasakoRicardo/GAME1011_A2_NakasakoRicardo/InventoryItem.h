@@ -18,5 +18,10 @@ protected:
 	bool broken;
 public:
 	void PrintItem();
-
 };
+
+template <class Templ> void InventoryItem<Templ>::PrintItem() {
+	cout << "This item is a " << name <<
+		", it costs $" << price << " and it has been used " << timesUsed
+		<< " times and it is currently " << (broken ? "broken" : "perfect") << endl;
+}

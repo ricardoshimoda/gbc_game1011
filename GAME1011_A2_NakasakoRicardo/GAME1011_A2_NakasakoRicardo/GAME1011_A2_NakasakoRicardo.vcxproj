@@ -154,8 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GAME1011_A2_NakasakoRicardo.cpp" />
-    <ClCompile Include="InventoryItem.cpp" />
-    <ClCompile Include="Note.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

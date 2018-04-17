@@ -35,12 +35,6 @@
     <ClCompile Include="GAME1011_A2_NakasakoRicardo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InventoryItem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Note.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SourceFile.txt" />
